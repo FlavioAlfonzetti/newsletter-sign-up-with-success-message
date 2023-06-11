@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap"
+      rel="stylesheet"
+    />
+    <title>Newsletter sign-up form with success message</title>
+  </head>
+  <body>
+    <div class="main">
+      <div class="main__text">
+        <h1>Stay updated!</h1>
+        <p>Join 60,000+ product managers receiving monthly updates on:</p>
+        <ul>
+          <li>
+            <img src="assets/images/icon-list.svg" />Product discovery and
+            building what matters
+          </li>
+          <li>
+            <img src="assets/images/icon-list.svg" />Measuring to ensure updates
+            are a success
+          </li>
+          <li><img src="assets/images/icon-list.svg" />And much more!</li>
+        </ul>
+        <form action="success.html" id="newsletter-form">
+          <div class="error-msg"></div>
+          <label for="fname">Email address</label>
+          <input type="text" id="email" placeholder="email@company.com" />
+          <button type="submit" value="Submit" class="btn" id="btn">
+            Subscribe to monthly newsletter
+          </button>
+        </form>
+      </div>
+      <div class="main__img-mobile">
+        <img src="assets/images/illustration-sign-up-mobile.svg" alt="" />
+      </div>
+      <div class="main__img-desktop">
+        <img src="assets/images/illustration-sign-up-desktop.svg" alt="" />
+      </div>
+    </div>
+
+    <script
+      src="https://code.jquery.com/jquery-3.7.0.min.js"
+      integrity="sha256-2Pmvv0kuTBOenSvLm6bvfBSSHrUJ+3A7x6P5Ebd07/g="
+      crossorigin="anonymous"
+    ></script>
+    <script type="module" src="js/main.js"></script>
+    <script type="module" src="../app.js"></script>
+  </body>
+</html>

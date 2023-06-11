@@ -1,0 +1,142 @@
+@import 'breakpoints', 'responsive', 'variables', 'success';
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: $ff-primary;
+  font-size: $fs-copy;
+  color: $neutral__dark-slate-grey;
+
+  .main {
+    display: grid;
+    gap: 1rem;
+
+    &__text {
+      order: 1;
+      padding: 1rem 1.5rem;
+
+      h1 {
+        font-size: $fs-h1;
+      }
+
+      p {
+        padding: 1rem 0;
+        line-height: 1.5;
+        letter-spacing: 0.2px;
+      }
+
+      ul {
+        list-style: none;
+        line-height: 1.5;
+        letter-spacing: 0.2px;
+
+        li {
+          display: flex;
+          padding: 0.4rem 0;
+          align-items: start;
+
+          img {
+            margin-right: 1rem;
+          }
+        }
+      }
+
+      form {
+        display: flex;
+        position: relative;
+        flex-direction: column;
+        padding-top: 2rem;
+        gap: 1rem;
+        font-weight: $fw-bold;
+
+        .error-msg {
+          position: absolute;
+          right: 0;
+          font-size: $fs-email-head;
+          color: $primary__tomato;
+        }
+
+        label {
+          font-size: $fs-email-head;
+        }
+
+        input {
+          font-family: $ff-primary;
+          padding: 1.2rem 0 1.2rem 1.4rem;
+          border-radius: 0.5rem;
+          border: 1px solid $neutral__grey;
+          font-size: $fs-copy;
+          width: 100%;
+
+          &:focus {
+            outline: 1px solid $neutral__charcoal-grey;
+          }
+
+          &::placeholder {
+            color: $neutral__charcoal-grey;
+          }
+
+          &.error {
+            background-color: $primary__pink;
+            color: $secondary__tomato;
+            border: 1px solid $primary__tomato;
+
+            &:focus {
+              outline: 1px solid $primary__tomato;
+            }
+
+            /* &::placeholder {
+              color: $secondary__tomato;
+            } */
+          }
+        }
+
+        .btn {
+          text-align: center;
+          text-decoration: none;
+          font-family: $ff-primary;
+          background-color: $neutral__dark-slate-grey;
+          color: $neutral__white;
+          border: none;
+          padding: 1.2rem 0;
+          border-radius: 0.5rem;
+          font-weight: $fw-bold;
+          font-size: $fs-copy;
+          margin-top: 0.4rem;
+          cursor: pointer;
+
+          &:link,
+          &:visited,
+          &:hover,
+          &:active {
+            text-decoration: none;
+          }
+
+          &:hover {
+            background: linear-gradient(45deg, #ff537b, #ff693d);
+          }
+        }
+      }
+    }
+
+    &__img-mobile {
+      order: -1;
+
+      img {
+        width: 100%;
+      }
+    }
+
+    &__img-desktop {
+      display: none;
+    }
+  }
+
+  @include large;
+}

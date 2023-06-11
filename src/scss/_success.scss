@@ -1,0 +1,54 @@
+body {
+  main {
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+    gap: 2rem;
+    padding: 1.5rem;
+    color: $neutral__dark-slate-grey;
+
+    .success-img {
+      margin-top: 8rem;
+    }
+
+    h1 {
+      font-size: $fs-h1;
+    }
+
+    p {
+      line-height: 1.5;
+      color: $neutral__charcoal-grey;
+
+      span {
+        font-weight: $fw-bold;
+      }
+    }
+
+    .btn-dismiss {
+      margin-top: 13rem;
+      text-align: center;
+      text-decoration: none;
+      font-family: $ff-primary;
+      background-color: $neutral__dark-slate-grey;
+      color: $neutral__white;
+      border: none;
+      padding: 1.2rem 0;
+      border-radius: 0.5rem;
+      font-weight: $fw-bold;
+      font-size: $fs-copy;
+      cursor: pointer;
+
+      &:link,
+      &:visited,
+      &:hover,
+      &:active {
+        text-decoration: none;
+      }
+
+      &:hover {
+        background: linear-gradient(45deg, #ff537b, #ff693d);
+      }
+    }
+  }
+  @include large_success;
+}
