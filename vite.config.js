@@ -9,7 +9,7 @@ module.exports = {
         index: '/index.html',
         success: '/success.html',
         main: '/js/main.js',
-        main: '/js/success.js',
+        successJs: '/js/success.js',
       },
     },
   },
@@ -18,17 +18,3 @@ module.exports = {
     hot: true,
   },
 };
-
-/* const path = require('path');
-
-export default {
-  root: path.resolve(__dirname, 'src'),
-  build: {
-    outDir: 'dist',
-  },
-  server: {
-    port: 8080,
-    hot: true,
-  },
-};
- */

@@ -1,1 +1,0 @@
-import"./main-702e1019.js";const s=require("express"),n=require("path"),e=s(),r={}.PORT||3e3;e.use(s.static(n.join(__dirname,"src/dist")));e.listen(r,()=>{console.log(`Server is running on port ${r}`)});
